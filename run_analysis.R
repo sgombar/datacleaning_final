@@ -52,10 +52,12 @@ subject_activity <- data.frame(stringsAsFactors = FALSE)
 for(act in levels(data[,80])) {
   for(vol in as.character(levels(data[,81]))) {
     varMeans <- filter(data, Activity==act, Subject==vol) %>% select(-Activity, -Subject) %>% summarise_each(funs(mean))
-    entry <- cbind(data.frame(paste(vol,act, sep="_")),varMeans)
+    entry <- cbind(data.frame(vol),data.frame(act))
+    entry <- cbind(entry, varMeans)
     subject_activity <- rbind(subject_activity, entry)
   }
 }
-colnames(subject_activity)[1] <- "Subject_Activity"
+colnames(subject_activity)[1] <- "Subject"
+colnames(subject_activity)[2] <- "Activity"
 
 print(subject_activity)
