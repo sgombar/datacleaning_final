@@ -1,17 +1,18 @@
 # Code Book
 
-Code book to summarize the data fields in `subject_activity.txt`.
+Code book to summarize the data fields in `tidy.txt`.
 
 ## Identifiers
 
-* `subject_activity` - The ID of the test subject with the activity as a single field.
+* `subject` - The ID of the test subjec
+* 'activity' - Activity as a single field.
 
 ## Measurements
-"Subject"
+"Subject" - Volunteer number 1-30
 
-"Activity"
+"Activity" - Activity (See Below)
 
-"tBodyAcc_mean_X"
+"tBodyAcc_mean_X" - Numeric Value ...
 
 "tBodyAcc_mean_Y"
 
